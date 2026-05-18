@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load('/content/drive/MyDrive/CyberProject_Models/xgb_final_model.pkl')
-scaler = joblib.load('/content/drive/MyDrive/CyberProject_Models/scaler_final.pkl')
+model = joblib.load('xgb_final_model.pkl')
+scaler = joblib.load('scaler_final.pkl')
 
 if hasattr(scaler, 'feature_names_in_'):
     FEATURES_ORDER = list(scaler.feature_names_in_)
